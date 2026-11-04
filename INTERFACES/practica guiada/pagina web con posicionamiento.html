@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/all.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        :root {
+            --color-primario: blue;
+        }
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Open Sans';
+        }
+        a {
+            text-decoration: none;
+        }
+        .navbar{
+            background: var(--color-primario);
+            height: 50px;
+            position: sticky;
+            top :0;
+            margin:0 auto;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 50px;
+            padding: 20px 40px;
+            font-weight: 600;
+        }
+        .navbar div{
+            width: 820px;
+            margin: 0 auto;
+
+        }
+
+        .contenedor-imagen{
+            height: 100vh;
+
+        }
+        .contenedor-imagen img{
+            width: 100%;
+            height:100%;
+            object-fit:cover;
+            object-position: center;
+        }
+        .btn-fijo{
+            position: fixed;
+            bottom:20px;
+            right:20px;
+            width:50px
+            height:50px;
+            background:var(--color-primario);
+            border-radius:50%;
+            text-align: center;
+            cursor:pointer;
+        }
+        .btn-fijo i{
+            color:white;
+            font-size: 20px;
+            line-height: 50px;
+        }
+        main {
+            height:1200px;
+
+        }
+        .contenedor{
+            height:100%;
+            position:relative;
+        }
+        .contenido{
+            position: absolute;
+            top: 0;
+            left: 20%;
+
+        }
+        .contenido p{
+            margin-bottom: 20px;
+            line-height:30px;
+
+        }
+        .contenido .titulo{
+            font-weight: normal;
+
+        }
+        .contenido .fecha{
+            font-size: 14px;
+            font-weight: 600;
+            color: #636363;
+
+        }
+        aside {
+            width:15%;
+            margin:20px;
+            background: #111;
+            padding:20px;
+            border-radius:5px;
+            text-align: center;
+            position:sticky;
+            top: 20px;
+            left:20px
+        }
+        aside .titulo{
+            font-weight: 600;
+            font-size: 25px;
+            margin-bottom:20px;
+            color:white;
+        }
+        aside .indice a{
+            color:var(--color-primario);
+            margin-bottom: 10px;
+            display: block;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-fijo">
+        <i class="fa-solid fa-envelope"></i>
+    </div>
+    <!-- Cabecera -->
+    <header>
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Precios</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="contenedor-imagen">
+            <img src="img/background8.jpg" alt="">
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <aside>
+                <h3 class="titulo">Temas </h3>
+                <nav class="indice">
+                    <a href="#">Articulo 1 </a>
+                    <a href="#">Articulo 2 </a>
+                    <a href="#">Articulo 3 </a>
+                    <a href="#">Articulo 4 </a>
+                </nav>
+            </aside>
+            <div class="contenido">
+                <div class="post">
+                    <h1 class="titulo">articulo 1</h1>
+                    <p class="fecha"> Publicado el 16 de octubre de 2026</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nobis eos ipsa obcaecati ipsam error magnam commodi velit minima, harum animi. A alias quis modi veniam, nesciunt dolore praesentium porro?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias et facere in doloremque, vitae saepe, omnis atque minima modi sed voluptatum iste rerum nisi ullam reprehenderit assumenda suscipit itaque hic.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt a, quaerat itaque sint est excepturi expedita vero ipsam ex omnis sed voluptas neque, voluptatibus quas veritatis corporis ea quod iure.
+                    </p>
+                     <div class="post">
+                    <h1 class="titulo">articulo 2</h1>
+                    <p class="fecha"> Publicado el 16 de octubre de 2026</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nobis eos ipsa obcaecati ipsam error magnam commodi velit minima, harum animi. A alias quis modi veniam, nesciunt dolore praesentium porro?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias et facere in doloremque, vitae saepe, omnis atque minima modi sed voluptatum iste rerum nisi ullam reprehenderit assumenda suscipit itaque hic.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt a, quaerat itaque sint est excepturi expedita vero ipsam ex omnis sed voluptas neque, voluptatibus quas veritatis corporis ea quod iure.
+                    </p>
+                     <div class="post">
+                    <h1 class="titulo">articulo 3</h1>
+                    <p class="fecha"> Publicado el 16 de octubre de 2026</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nobis eos ipsa obcaecati ipsam error magnam commodi velit minima, harum animi. A alias quis modi veniam, nesciunt dolore praesentium porro?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias et facere in doloremque, vitae saepe, omnis atque minima modi sed voluptatum iste rerum nisi ullam reprehenderit assumenda suscipit itaque hic.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt a, quaerat itaque sint est excepturi expedita vero ipsam ex omnis sed voluptas neque, voluptatibus quas veritatis corporis ea quod iure.
+                    </p>
+                     <div class="post">
+                    <h1 class="titulo">articulo 4</h1>
+                    <p class="fecha"> Publicado el 16 de octubre de 2026</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nobis eos ipsa obcaecati ipsam error magnam commodi velit minima, harum animi. A alias quis modi veniam, nesciunt dolore praesentium porro?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias et facere in doloremque, vitae saepe, omnis atque minima modi sed voluptatum iste rerum nisi ullam reprehenderit assumenda suscipit itaque hic.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt a, quaerat itaque sint est excepturi expedita vero ipsam ex omnis sed voluptas neque, voluptatibus quas veritatis corporis ea quod iure.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor-imagen">
+            <img src="img/background9.jpeg" alt="">
+        </div>
+    </footer>
+</body>
+</html>

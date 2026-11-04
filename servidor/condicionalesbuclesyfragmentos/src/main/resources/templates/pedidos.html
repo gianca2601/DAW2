@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Pedidos</title>
+</head>
+<body>
+
+    <h1>Lista de Pedidos</h1>
+
+    <div th:each="pedido : ${pedidos}">
+        
+        <div th:switch="${pedido.estado}">
+            
+            <div th:case="'pendiente'" th:insert="~{fragments :: pedidoPendiente}"></div>
+            <div th:case="'enviado'" th:insert="~{fragments :: pedidoEnviado}"></div>
+            <div th:case="'entregado'" th:insert="~{fragments :: pedidoEntregado}"></div>
+            
+            <div th:case="*" style="background-color: #e2e3e5; padding: 15px; margin-bottom: 10px; border-radius: 5px;">
+                <h3 th:text="${pedido.nombre}">Nombre del Pedido</h3>
+                <p>Estado desconocido: <span th:text="${pedido.estado}"></span></p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

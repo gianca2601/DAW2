@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en "xmlns:th="http:\\www.thymelaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comunes</title>
+</head>
+<body>
+    <header th:fragment="cabecera(titulo, subtitulo)">
+        <h1 th:text="${titulo}">Título de ejemplo</h1>
+        <p th:text="${subtitulo}">Subtítulo de ejemplo</p>
+    </header>
+
+    <nav th:fragment="menu">
+        <a th:href="@{/}">Inicio</a>
+        <a th:href="@{/productos}">Productos</a>
+        <a th:href="@{/sobre}">sobre nosotros</a>
+    </nav>
+  
+    <footer th:fragment="pie">
+        <p>Aplicación de ejemplo de 2.º de DAW</p>
+    </footer>
+</body>
+</html>

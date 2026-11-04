@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>utilitarios</title>
+</head>
+<body>
+    <h1>Objetos Utilitarios</h1>
+    <p  th:text="${#temporals.format(fecha, 'd/mm/yyyy - - hh:mm')}"></p>
+    <p th:text="| EL MES ES: ${#temporals.monthName(fecha)}|"></p>
+     <p th:text="| EL DIA DE LA SEMANA ES: ${#temporals.dayOfWeekName(fecha)}|"></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+    <p th:text="|precio: ${precio}">precio</p>
+    <p th:text="|cantidad: ${cantidad}|">cantidad</p>
+    <p th:text=" 'precioTotal: ' + (${precio}*${cantidad}) "></p>
+    <p th:text="'precio de 5 unidades:' + (${precio}*${5}) "></p>
+</body>
+</html>

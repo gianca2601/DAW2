@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+    <h2>Categorías y Productos</h2>
+
+    <div th:each="entry : ${categorias}">
+        <h3 th:text="${'Categoría: ' + entry.key}"></h3>
+
+        <ul th:unless="${#lists.isEmpty(entry.value)}">
+            <li th:each="producto : ${entry.value}" th:text="${producto}"></li>
+        </ul>
+
+        <p th:if="${#lists.isEmpty(entry.value)}">Sin productos disponibles</p>
+    </div>
+
+</body>
+</html>

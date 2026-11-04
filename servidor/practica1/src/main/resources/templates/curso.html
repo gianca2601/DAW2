@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Información del Curso</title>
+</head>
+<body>
+
+    <!-- El enunciado pide mostrar el nombre como encabezado -->
+    <h1 th:text="${nombre}">Nombre del Curso</h1>
+
+    <!-- El resto de los datos mediante th:text -->
+    <ul>
+        <li>
+            <strong>Aula:</strong> 
+            <span th:text="${aula}">Aula</span>
+        </li>
+        <li>
+            <strong>Plazas Totales:</strong> 
+            <span th:text="${plazasTotales}">0</span>
+        </li>
+        <li>
+            <strong>Plazas Ocupadas:</strong> 
+            <span th:text="${plazasOcupadas}">0</span>
+        </li>
+        <li>
+            <strong>Plazas Disponibles:</strong> 
+            <span th:text="${plazasDisponibles}">0</span>
+        </li>
+    </ul>
+
+    <!-- Enlaces a ambos cursos usando th:href -->
+    <nav>
+        <p><strong>Navegación:</strong></p>
+        <a th:href="@{/curso/java}">Curso de Java</a> | 
+        <a th:href="@{/curso/web}">Curso de Desarrollo Web</a>
+    </nav>
+
+</body>
+</html>

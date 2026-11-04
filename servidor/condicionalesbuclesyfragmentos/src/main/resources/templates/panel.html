@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Usuario</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 30px auto; padding: 20px; }
+        .seccion { border: 1px solid #4cae4c; background-color: #eaf2e8; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+        .sin-contenido { border: 1px solid #ebccd1; background-color: #f2dede; color: #a94442; padding: 15px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Panel Resumen de Usuario</h1>
+
+    <!-- Secciones individuales con <th:block> invisibles -->
+    <th:block th:if="${mostrarPerfil}">
+        <div class="seccion">
+            <h3>👤 Perfil de Usuario</h3>
+            <p>Información personal, datos de cuenta y preferencias.</p>
+        </div>
+    </th:block>
+
+    <th:block th:if="${mostrarPedidos}">
+        <div class="seccion">
+            <h3>📦 Mis Pedidos</h3>
+            <p>Historial de compras realizadas y seguimiento de envíos.</p>
+        </div>
+    </th:block>
+
+    <th:block th:if="${mostrarMensajes}">
+        <div class="seccion">
+            <h3>✉️ Mensajes</h3>
+            <p>Tienes notificaciones y mensajes sin leer en tu bandeja de entrada.</p>
+        </div>
+    </th:block>
+
+    <!-- Bloque alternativo cuando todas las opciones son false -->
+    <th:block th:if="${not mostrarPerfil and not mostrarPedidos and not mostrarMensajes}">
+        <div class="sin-contenido">
+            <p>⚠️ Sin contenido disponible.</p>
+        </div>
+    </th:block>
+
+</body>
+</html>

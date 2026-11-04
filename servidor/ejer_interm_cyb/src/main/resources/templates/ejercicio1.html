@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+    <h2>Lista de Usuarios</h2>
+
+    <table border="1">
+        <head>
+            <tr>
+                <th>Nombre</th>
+                <th>Rol</th>
+                <th>Estado</th>
+            </tr>
+        </head>
+        <body>
+            <tr th:each="u : ${usuarios}" 
+                th:classappend="${!u.activo} ? 'inactivo' : ''">
+                 <td th:text="${u.nombre + (u.rol == 'ADMIN' ? ' ⭐' : '')}"></td>
+                <td th:text="${u.rol}"></td>
+                <td th:text="${u.activo ? 'Activo' : 'Inactivo'}"></td>
+            </tr>
+        </body>
+    </table>
+
+</body>
+</html>

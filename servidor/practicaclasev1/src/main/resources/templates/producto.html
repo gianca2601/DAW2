@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ficha de productos </title>
+</head>
+<body>
+    <h1>ficha de producto</h1>
+        <p th:text="|producto: ${nombre}|"></p>
+        <p th:text="|categoria: ${categoria}|"></p>
+        <p th:text="|precio: ${precio}|"></p>
+
+            <p th:text="|precio de dos unidades: ${precio * 2}|"></p>
+                
+                <a th:href="@{/}">volvel al inicio</a>
+</body>
+</html>

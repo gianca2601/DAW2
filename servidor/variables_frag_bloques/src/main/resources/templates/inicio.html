@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+    <!-- cabecera-->
+     <div th:replace="~{fragmentos/comunes :: cabecera(
+    'Supermercado DAW',
+    'Bienvenido a nuestra tienda')}"></div>
+    <!-- barra e navegacion-->
+     <div th:replace="~{fragmentos/comunes :: menu}"></div>
+    <!-- cuerpo-->
+     <div th:replace="~{fragmentos/comunes :: pie}"></div>
+    <!-- pie de pagina-->
+</body>
+</html>
