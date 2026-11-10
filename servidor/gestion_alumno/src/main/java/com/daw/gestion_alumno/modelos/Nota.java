@@ -15,7 +15,7 @@ public class Nota {
 
     // Relación muchos a uno: muchas notas pertenecen a un alumno
     @ManyToOne
-    @JoinColumn(name = "id_alumno") // Clave foránea en la tabla notas
+    @JoinColumn(name = "id_alumno" ) // Clave foránea en la tabla notas
     private Alumno alumno;
 
     public Nota() {}
@@ -31,7 +31,7 @@ public class Nota {
     public String getAsignatura() { return asignatura; }
     public double getCalificacion() { return calificacion; }
 
-    
+
     public Alumno getAlumno() { return alumno; }
 
     public void setAlumno(Alumno alumno) {
