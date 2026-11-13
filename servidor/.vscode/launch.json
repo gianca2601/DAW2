@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GestionAlumnoApplication<gestion_alumno>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.daw.gestion_alumno.GestionAlumnoApplication",
+            "projectName": "gestion_alumno",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

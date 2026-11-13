@@ -78,7 +78,7 @@ public class AlumnoControladora {
     public String verPerfil(@PathVariable Long id, Model model) {
         Optional<Alumno> alumno = this.alumnoService.buscarPorId(id);
         //comprobar si hay alumno con esa id
-        if(alumno.isEmpty()){
+        if(alumno.isEmpty() || alumno.get().getPerfil() == null){
         return "redirect:/alumno";
         }
        model.addAttribute("alumno", alumno);
