@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.daw.gestion_alumno.modelos.Alumno;
 import com.daw.gestion_alumno.modelos.Nota;
-
+import com.daw.gestion_alumno.modelos.Perfil;
 @Controller 
 @RequestMapping ("/alumno")
 public class AlumnoControladora {
@@ -74,5 +74,15 @@ public class AlumnoControladora {
         return "detalle-alumno";
     }
     
+    @GetMapping("/perdil/{id}")
+    public String verPerfil(@PathVariable Long id, Model model) {
+        Optional<Alumno> alumno = this.alumnoService.buscarPorId(id);
+        //comprobar si hay alumno con esa id
+        if(alumno.isEmpty()){
+        return "redirect:/alumno";
+        }
+       model.addAttribute("alumno", alumno);
+       return "perfil-alumno";
+    }
     
 }
